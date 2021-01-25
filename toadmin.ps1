@@ -38,8 +38,6 @@ function Test-IsAdmin
  $principal.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 } 
 
-param ([string]$InputPath, [string]$OutPutPath)
-
 $ent = Test-IsAdmin
 if ( -Not $ent ) {
   Start-Process powershell -Verb runAs
