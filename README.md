@@ -4,7 +4,7 @@ Small helper scripts and infos to use Powershell
 # Einzeiler:
 dir -R | where-object {$_.lastwritetime -ge (get-date).AddHours(-10)}
 
-$Script1=test.ps1 Measure-Command -Expression { $Script1 }
+$Script1=test.ps1 ; Measure-Command -Expression { $Script1 }
 
 # Defaults setzen falls nix anderes angegeben wird.
 
