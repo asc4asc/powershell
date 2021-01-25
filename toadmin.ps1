@@ -1,10 +1,3 @@
-# -------------------------------------------------------------------
-# ScriptIdea: Work around the problem to be the real Administrator. 
-# Author: Andreas Schockenhoff 
-# Date: 2021-01-25
-# comments: 
-# ---------------------------------------------------------------------
-
 <#
   .SYNOPSIS
   Check if you are admin if not try to become this rigths.
@@ -28,7 +21,16 @@
   PS> .\toadmin.ps1
 #>
 
-param ()
+# -------------------------------------------------------------------
+# ScriptIdea: Work around the problem to be the real Administrator. 
+# Author: Andreas Schockenhoff 
+# Date: 2021-01-25
+# comments: 
+# ---------------------------------------------------------------------
+
+Set-StrictMode –version latest
+
+# param ()
 # param ([string]$InputPath, [string]$OutPutPath)
 
 function Test-IsAdmin
