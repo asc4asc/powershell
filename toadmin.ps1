@@ -1,3 +1,10 @@
+# -------------------------------------------------------------------
+# ScriptIdea: Work around the problem to be the real Administrator. 
+# Author: Andreas Schockenhoff 
+# Date: 2021-01-25
+# comments: 
+# ---------------------------------------------------------------------
+
 <#
   .SYNOPSIS
   Check if you are admin if not try to become this rigths.
