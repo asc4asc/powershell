@@ -41,7 +41,8 @@ function Test-IsAdmin
 $ent = Test-IsAdmin
 if ( -Not $ent ) {
   Start-Process powershell -Verb runAs
-  # Start-Process powershell -Verb runAs $PSScriptRoot\toadmin.ps1 ; exit
+  # $PSScriptName=$MyInvocation.MyCommand.Name
+  # Start-Process powershell -Verb runAs $PSScriptRoot\$PSScriptName ; exit
 }
 
 # things to do!
