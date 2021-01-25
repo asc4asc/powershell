@@ -12,3 +12,11 @@ Param (
 ) #end param
 
 If(-not($computerName)) { $computerName = $env:computerName } ; $computername
+
+# Check to prevent Errors?
+if((Get-WmiObject win32_computersystem).model -ne "virtual machine")
+ {
+ $response = Read-Host -prompt "This script is best run in a VM.
+ Do you wish to continue? <y / n>"
+ if ($response -eq "n") { exit }
+ }
