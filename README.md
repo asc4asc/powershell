@@ -6,6 +6,8 @@ dir -R | where-object {$_.lastwritetime -ge (get-date).AddHours(-10)}
 
 $Script1=test.ps1 ; Measure-Command -Expression { $Script1 }
 
+$tmpfile = [io.path]::GetTempFileName()
+
 # Defaults setzen falls nix anderes angegeben wird.
 
 Param (
