@@ -1,4 +1,5 @@
 # from Windows PowerShell Best Practices / Ed Wilson
+# call /testumgebung file.txt
 Param(
  [Parameter(Mandatory=$true)]
  [string]$path,
