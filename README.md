@@ -28,3 +28,7 @@ if((Get-WmiObject win32_computersystem).model -ne "virtual machine")
 Get-Process -IncludeUserName | Select-Object Username |Select-String 'EKF\\asc'
 
 Get-Process -IncludeUserName | Where UserName -match 'EKF\\asc' # | Stop-Process -force 
+
+Get-Process -IncludeUserName | Where {$_.username -like "*asc*"}
+
+Get-Process -IncludeUserName | Where {$_.username -eq "ASC-SURF\asc4a"}
