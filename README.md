@@ -25,5 +25,5 @@ if((Get-WmiObject win32_computersystem).model -ne "virtual machine")
  }
 
 
-Test me:
+# Test me:
 Get-Process -IncludeUserName | Select-Object Username |Select-String 'EKF\\asc'
