@@ -24,7 +24,7 @@ if((Get-WmiObject win32_computersystem).model -ne "virtual machine")
  if ($response -eq "n") { exit }
  }
 
-
 # Test me:
 Get-Process -IncludeUserName | Select-Object Username |Select-String 'EKF\\asc'
+
 Get-Process -IncludeUserName | Where UserName -match 'EKF\\asc' # | Stop-Process -force 
