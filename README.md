@@ -23,3 +23,7 @@ if((Get-WmiObject win32_computersystem).model -ne "virtual machine")
  Do you wish to continue? <y / n>"
  if ($response -eq "n") { exit }
  }
+
+
+Test me:
+Get-Process -IncludeUserName | Select-Object Username |Select-String 'EKF\\asc'
