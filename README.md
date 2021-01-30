@@ -36,3 +36,12 @@ Get-ChildItem -Path HKLM:\ -Recurse # > file.txt # System ??? Vergleichen ? Bess
 # HKEY_CURRENT_USER (HKCU) and HKEY_LOCAL_MACHINE (HKLM). Gibt es mehr?
 Get-PSDrive # -PSProvider Registry
 ```
+```
+cp profile.tmp $PROFILE
+
+PS C:\Users\asc4a> cat .\profile.tmp
+function prompt
+{
+ "PS [$env:COMPUTERNAME] >"
+}
+````
