@@ -31,7 +31,10 @@ Get-Process -IncludeUserName | Select-Object Username |Select-String 'domain\\us
 Get-Process -IncludeUserName | Where UserName -match 'domain\\user' # | Stop-Process -force 
 Get-Process -IncludeUserName | Where {$_.username -like "*user*"}
 Get-Process -IncludeUserName | Where {$_.username -eq "domain\user"}
-
+```
+# Registry
+https://docs.microsoft.com/en-us/powershell/scripting/samples/working-with-registry-entries?view=powershell-7.1
+```
 Get-ChildItem -Path HKCU:\ -Recurse # > file.txt # User ??? Vergleichen ? Besser nur einen Teil?
 Get-ChildItem -Path HKLM:\ -Recurse # > file.txt # System ??? Vergleichen ? Besser nur einen Teil?
 # HKEY_CURRENT_USER (HKCU) and HKEY_LOCAL_MACHINE (HKLM). Gibt es mehr?
