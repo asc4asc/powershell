@@ -50,3 +50,12 @@ function prompt
  "PS [$env:COMPUTERNAME] >"
 }
 ````
+# Try it
+```
+cd HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+# Create a new DWORD value called "VerboseStatus" and give it a value of 1.
+# New-Item –Path "HKCU:\dummy" –Name NetwrixKey
+New-Item –Path "." –Name VerboseStatus
+# New-ItemProperty -Path "HKCU:\dummy\NetwrixKey" -Name "NetwrixParam" -Value ”NetwrixValue”  -PropertyType "String"
+New-ItemProperty -Path "." -Name "VerboseStatus" -Value ”1”  # -PropertyType "?"
+```
