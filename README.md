@@ -34,5 +34,5 @@ Get-Process -IncludeUserName | Where {$_.username -like "*user*"}
 
 Get-Process -IncludeUserName | Where {$_.username -eq "domain\user"}
 
-Get-ChildItem -Path HKCU:\ -Recurse > file
+Get-ChildItem -Path HKCU:\ -Recurse # > file.txt ??? Vergleichen ? Besser nur einen Teil?
 
