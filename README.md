@@ -30,6 +30,9 @@ Get-Process -IncludeUserName | Select-Object Username |Select-String 'EKF\\asc'
 
 Get-Process -IncludeUserName | Where UserName -match 'EKF\\asc' # | Stop-Process -force 
 
-Get-Process -IncludeUserName | Where {$_.username -like "*asc*"}
+Get-Process -IncludeUserName | Where {$_.username -like "*user*"}
 
-Get-Process -IncludeUserName | Where {$_.username -eq "ASC-SURF\asc4a"}
+Get-Process -IncludeUserName | Where {$_.username -eq "domain\user"}
+
+Get-ChildItem -Path HKCU:\ -Recurse > file
+
